@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes</title>
+    <meta charset="UTF-8" />
+
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="SheCOdes" class="logo" />
+    <h1>JS Timing events</h1>
+
+    <h3>Challenge 1</h3>
+    <p>
+      Display the current date in the div below, only 5 seconds afer the page
+      loads
+    </p>
+    <div id="date">
+      👉
+      <script>
+        function displayDate() {
+          let date = document.querySelector("#date");
+          date.innerHTML = new Date();
+        }
+        setTimeout(displayDate, 5000);
+      </script>
+      👈
+    </div>
+
+    <h3>Challenge 2</h3>
+    <p>
+      Display the number of milliseconds of the current date below and update it
+      every millisecond
+    </p>
+    <div id="milliseconds">
+      👉
+      <script>
+        function displaycurrentMilliseconds() {
+          let millisecondsElement = document.querySelector("#milliseconds");
+          let currentDate = new Date();
+          milliseconds.innerHTML = currentDate.getMilliseconds();
+        }
+        setInterval(displaycurrentMilliseconds, 1);
+      </script>
+      👈
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

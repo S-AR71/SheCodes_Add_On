@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SheCodes</title>
+    <meta charset="UTF-8" />
+
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <img src="images/logo.png" alt="SheCOdes" class="logo" />
+    <h1>HTML Select Element</h1>
+
+    <h3>Challenge 1</h3>
+
+    <div>
+      <label for="fruits">What is your favorite fruit?</label>
+      <select name="" id="fruits">
+        <option value="">Select a fruit?</option>
+        <option value="Mango">Mango 🥭</option>
+        <option value="Apricot">Apricot 🍑</option>
+        <option value="Tomato">Tomato 🍅</option>
+        <option value="Orange">Orange 🍊</option>
+        <option value="Grapes">Grapes 🍇</option>
+      </select>
+    </div>
+
+    <h3>Challenge 2</h3>
+    <p>
+      <label for="color">Choose your favorite primary color?</label>
+      <select id="colors">
+        <option value="">Select a color?</option>
+        <option value="❤️">red</option>
+        <option value="💙">blue</option>
+        <option value="💛">yellow</option>
+      </select>
+    </p>
+
+    <script>
+      function showSelectedcolor(event) {
+        if (event.target.value.length > 0) {
+          alert(event.target.value);
+        }
+      }
+
+      let colorsSelect = document.querySelector("#colors");
+      colorsSelect.addEventListener("change", showSelectedcolor);
+    </script>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
